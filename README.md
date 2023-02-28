@@ -1,14 +1,14 @@
 # react-native-typing-animation-effect
 
-![](https://i.imgur.com/YxgvSzg.gif)
+![](gif)
 
-react-native-typing-animation-effect is a plugin to create typing effect with ease, thus increasing flexibility to use any where in the component. in this component we can also pass text style in params. 
+react-native-tv-cast is a plugin to cast content from android phone to any smart tv that is connected to internet with ease, thus increasing flexibility to use any where in the component.
 
 ## Getting started
 
-`$ npm install react-native-typing-animation-effect --save`
+`$ npm install react-native-tv-cast --save`
 
-`$ yarn add react-native-typing-animation-effect`
+`$ yarn add react-native-tv-cast`
 
 To use this dependency in your project, the following packages are needed. 
 1. 'react'
@@ -17,16 +17,16 @@ To use this dependency in your project, the following packages are needed.
 ### Mostly automatic installation
 
 
-## Usage (Example of react-native-typing-animation-effect )
+## Usage (Example of react-native-tv-cast )
 ```javascript
 
 
 
 import React, {Component} from 'react';
 import {View} from 'react-native';
-import TypingEffectText from 'react-native-typing-animation-effect';
+import TVCast from 'react-native-tv-cast';
 /*
-    npm install react-native-typing-animation-effect
+    npm install react-native-tv-cast
 */
 
 export default class App extends Component{
@@ -36,9 +36,7 @@ export default class App extends Component{
     render(){
         return (
        <View>
-            <TypingEffectText style={{fontSize: 50}}>
-            hello world
-            </TypingEffectText>
+            
         </View>
         );
     }
@@ -46,21 +44,21 @@ export default class App extends Component{
 
 
 // TODO: What to do with the module?
-TypingEffectText;
+TVCast;
 ```
 
 # required Props and its datatypes :
 
 required Props and its datatypes :
 
-1.  style  : any text styles
 
 
 
 # Credit goes to : 
 
 1. 'react'
-3. 'react-native'
+2. 'react-native'
+3. 'connect-sdk' 
 
 # Contribution :
 
