@@ -1,25 +1,38 @@
 {
-  "name": "react-native-typing-animation-effect",
-  "version": "1.0.6",
-  "description": "Animated typing effect for text in react native",
+  "name": "react-native-tv-cast",
+  "version": "0.0.1",
+  "description": "React native package to connect all Smart Tvs",
   "main": "index.js",
+  "typings": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishna4157/react-native-tv-cast.git"
+  },
+  "keywords": [
+    "react-native-tv-cast",
+    "chromecast",
+    "smart tv",
+    "react-native"
+  ],
+  "author": "Krishna Santosh Garaga",
+  "peerDependencies": {
+    "react-native": ">=0.8.0"
+  },
+  "devDependencies": {
+    "glob": "^7.1.4",
+    "promisify-child-process": "^3.1.1"
+  },
+  "files": [
+    "**/*.@(js|ts)",
+    "android/build.gradle",
+    "android/src/**/*.@(java|xml)"
+  ],
+  "bugs": {
+    "url": "https://github.com/krishna4157/react-native-tv-cast/issues"
+  },
+  "homepage": "https://github.com/krishna4157/react-native-tv-cast#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krishna4157/react-native-typing-effect.git"
-  },
-  "keywords": [
-    "react-native-typing-effect",
-    "type effect",
-    "type animation",
-    "react-native"
-  ],
-  "author": "krishna4157",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/krishna4157/react-native-typing-effect/issues"
-  },
-  "homepage": "https://github.com/krishna4157/react-native-typing-effect#readme"
+  "license": "ISC"
 }
