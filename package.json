@@ -1,0 +1,25 @@
+{
+  "name": "react-native-typing-animation-effect",
+  "version": "1.0.6",
+  "description": "Animated typing effect for text in react native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishna4157/react-native-typing-effect.git"
+  },
+  "keywords": [
+    "react-native-typing-effect",
+    "type effect",
+    "type animation",
+    "react-native"
+  ],
+  "author": "krishna4157",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krishna4157/react-native-typing-effect/issues"
+  },
+  "homepage": "https://github.com/krishna4157/react-native-typing-effect#readme"
+}
