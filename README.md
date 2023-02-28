@@ -36,6 +36,8 @@ import com.connectsdk.service.DeviceService;
     ...
   }
 
+  After that Add EventListeners 'deviceList' for list of devices and 'duration' for duration
+
 
 ## Usage (Example of react-native-tv-cast )
 ```javascript

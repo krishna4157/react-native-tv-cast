@@ -57,23 +57,6 @@ declare class TVCast {
   isLoaded(): boolean;
 
   /**
-   * Return the time of audio (second)
-   */
-  getDuration(): number;
-
-  /**
-   * Return the volume of the audio player (not the system-wide volume),
-   * Ranges from 0.0 (silence) through 1.0 (full volume, the default)
-   */
-  getVolume(): number;
-
-  /**
-   * Set the volume
-   * @param value - ranging from 0.0 (silence) through 1.0 (full volume)
-   */
-  setVolume(value: number): this;
-
-  /**
    * Whether the player is playing or not.
    */
   isPlaying(): boolean;
