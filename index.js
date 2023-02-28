@@ -14,11 +14,15 @@ function isRelativePath(path) {
 
 TVCast.resetDiscovery = function() {
   // calculates the volumes for left and right channels
-  TVCast.execute("resetDiscovery",JSON.stringify([]),(e)=>{});
+  TVCast.execute("resetDiscovery",JSON.stringify([]),(e)=>{
+                   
+  },(e) => {
 
+      // console.log("CHECK ERROR : ",e);
+  });
 }
 
-TVCast.stopCasting =  function() {
+TVCast.stopCast =  function() {
   TVCast.stopCasting();
 
       // this.onPlaySubscription = eventEmitter.addListener(
@@ -38,30 +42,11 @@ TVCast.stopCasting =  function() {
     
   }
 
-  TVCast.setSelectedDevice = function(deviceId,obj,func){
+  TVCast.setDevice = function(deviceId,obj,func){
     TVCast.setSelectedDevice(deviceId, obj,func);
   }
 
-  this._loaded = false;
-  this._key = nextKey++;
-  this._playing = false;
-  this._duration = -1;
-  this._numberOfChannels = -1;
-  this._volume = 1;
-  this._pan = 0;
-  this._numberOfLoops = 0;
-  this._speed = 1;
-  this._pitch = 1;
- 
 
-TVCast.prototype.isLoaded = function() {
-  return this._loaded;
-};
-
-
-TVCast.prototype.stop = function() {
-  stopCasting();
-};
 
 
 

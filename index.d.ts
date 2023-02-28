@@ -29,7 +29,7 @@ declare class TVCast {
    * Use this method to stop the casting process.
    *
    */
-  static stopCasting(): void;
+  static stopCast(): void;
 
   /**
    * Sets Selected Device For Casting Process.
@@ -45,7 +45,7 @@ declare class TVCast {
    * @param callback Can be set to retrieve the response of output values.
    *
    */
-  static setSelectedDevice(
+  static setDevice(
     deviceId: DeviceId,
     StreamData: StreamData,
     callback: CallbackType
