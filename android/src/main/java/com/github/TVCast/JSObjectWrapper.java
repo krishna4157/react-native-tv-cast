@@ -7,14 +7,14 @@ import com.connectsdk.core.JSONSerializable;
 import com.facebook.react.bridge.Callback;
 
 public class JSObjectWrapper implements JSONSerializable {
-    ConnectSDKModule module;
+    TVConnectModule module;
     Callback callbackContext;
 
     static long nextObjectId = 0;
     public String objectId;
     public String callbackId;
 
-    public JSObjectWrapper(ConnectSDKModule module) {
+    public JSObjectWrapper(TVConnectModule module) {
         this.module = module;
         this.objectId = "object_" + Long.toString(++nextObjectId);
         this.callbackContext = null;

@@ -8,7 +8,7 @@ import com.connectsdk.service.capability.MediaControl;
 public class MediaControlWrapper extends JSObjectWrapper {
     MediaControl mediaControl;
 
-    public MediaControlWrapper(ConnectSDKModule module, MediaControl control) {
+    public MediaControlWrapper(TVConnectModule module, MediaControl control) {
         super(module);
         this.mediaControl = control;
     }

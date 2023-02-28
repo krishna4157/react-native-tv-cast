@@ -10,7 +10,7 @@ import com.connectsdk.service.capability.PlaylistControl;
 public class PlaylistControlWrapper extends JSObjectWrapper {
     PlaylistControl playlistControl;
 
-    public PlaylistControlWrapper(ConnectSDKModule module, PlaylistControl control) {
+    public PlaylistControlWrapper(TVConnectModule module, PlaylistControl control) {
         super(module);
         this.playlistControl = control;
     }

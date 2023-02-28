@@ -33,7 +33,7 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import okhttp3.internal.platform.Platform;
 
 public class DiscoveryManagerWrapper extends ReactContextBaseJavaModule implements DiscoveryManagerListener {
-    ConnectSDKModule module;
+    TVConnectModule module;
     DiscoveryManager discoveryManager;
     Callback callbackContext;
     List<ConnectableDevice> mDeviceList = new LinkedList<>();
@@ -44,7 +44,7 @@ public class DiscoveryManagerWrapper extends ReactContextBaseJavaModule implemen
         return "DiscoveryManager";
     }
 
-    DiscoveryManagerWrapper(ConnectSDKModule module, DiscoveryManager discoveryManager) {
+    DiscoveryManagerWrapper(TVConnectModule module, DiscoveryManager discoveryManager) {
         this.module = module;
 
         discoveryManager.registerDefaultDeviceTypes();
@@ -207,7 +207,7 @@ public class DiscoveryManagerWrapper extends ReactContextBaseJavaModule implemen
 
     @ReactMethod
     void startDiscovery(ReadableMap mapArgs, final Callback Callback) throws JSONException, ClassNotFoundException {
-        JSONObject args = ConnectSDKModule.convertMapToJson(mapArgs);
+        JSONObject args = TVConnectModule.convertMapToJson(mapArgs);
 
         if (args != null && args.length() > 0) {
             configure(args);

@@ -65,9 +65,9 @@ public class JSCommand {
                 array.pushString("success");
                 for (Object value : objs) {
                     if (value instanceof JSONObject) {
-                        array.pushMap(ConnectSDKModule.convertJsonToMap((JSONObject) value));
+                        array.pushMap(TVConnectModule.convertJsonToMap((JSONObject) value));
                     } else if (value instanceof JSONArray) {
-                        array.pushArray(ConnectSDKModule.convertJsonToArray((JSONArray) value));
+                        array.pushArray(TVConnectModule.convertJsonToArray((JSONArray) value));
                     } else if (value instanceof Boolean) {
                         array.pushBoolean((Boolean) value);
                     } else if (value instanceof Integer) {
@@ -140,7 +140,7 @@ public class JSCommand {
 
         try {
             errorObj.put("message", errorMessage);
-            errorCallback.invoke(ConnectSDKModule.convertJsonToMap(errorObj));
+            errorCallback.invoke(TVConnectModule.convertJsonToMap(errorObj));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -156,7 +156,7 @@ public class JSCommand {
         try {
             errorObj.put("message", ex.getMessage());
             errorObj.put("detail", ex.toString());
-            errorCallback.invoke(ConnectSDKModule.convertJsonToMap(errorObj));
+            errorCallback.invoke(TVConnectModule.convertJsonToMap(errorObj));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -172,7 +172,7 @@ public class JSCommand {
             errorObj.put("code", error.getCode());
             errorObj.put("message", error.getMessage());
             errorObj.put("detail", error.getPayload());
-            errorCallback.invoke(ConnectSDKModule.convertJsonToMap(errorObj));
+            errorCallback.invoke(TVConnectModule.convertJsonToMap(errorObj));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -335,7 +335,7 @@ public class JSCommand {
         return new WebAppSession.LaunchListener() {
             @Override
             public void onSuccess(WebAppSession session) {
-                ConnectSDKModule module = deviceWrapper.module;
+                TVConnectModule module = deviceWrapper.module;
                 WebAppSessionWrapper wrapper = new WebAppSessionWrapper(module, session);
                 deviceWrapper.module.addObjectWrapper(wrapper);
 

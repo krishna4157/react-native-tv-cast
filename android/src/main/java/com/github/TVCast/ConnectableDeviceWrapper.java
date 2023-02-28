@@ -18,7 +18,7 @@ import com.facebook.react.bridge.Callback;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
 class ConnectableDeviceWrapper implements ConnectableDeviceListener {
-    ConnectSDKModule module;
+    TVConnectModule module;
     String deviceId;
     ConnectableDevice device;
     Callback successCallback;
@@ -27,7 +27,7 @@ class ConnectableDeviceWrapper implements ConnectableDeviceListener {
     JSCommandDispatcher dispatcher;
     boolean active = false;
 
-    public ConnectableDeviceWrapper(ConnectSDKModule module, ConnectableDevice device) {
+    public ConnectableDeviceWrapper(TVConnectModule module, ConnectableDevice device) {
         this.module = module;
         this.device = device;
         this.deviceId = device.getId();

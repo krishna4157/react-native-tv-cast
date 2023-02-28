@@ -42,7 +42,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class JSCommandDispatcher {
-    ConnectSDKModule module;
+    TVConnectModule module;
     ConnectableDeviceWrapper deviceWrapper;
     ConnectableDevice device;
     HashMap<String, Method> methodCache = new HashMap<>();
