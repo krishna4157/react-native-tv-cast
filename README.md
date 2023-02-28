@@ -16,6 +16,26 @@ To use this dependency in your project, the following packages are needed.
 
 ### Mostly automatic installation
 
+## Modify MainApplication.java
+
+  
+import com.connectsdk.discovery.DiscoveryManager;
+import com.connectsdk.discovery.DiscoveryProvider;
+import com.connectsdk.service.DeviceService;
+
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    DiscoveryManager.init(getApplicationContext());
+    try {
+      DiscoveryManager.getInstance().registerDeviceService((Class<DeviceService>) Class.forName("com.connectsdk.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.connectsdk.discovery.provider.CastDiscoveryProvider"));
+    } catch (ClassNotFoundException e) {
+      Log.d("CHROME","CHROME CAST NOT REGISTERED");
+      e.printStackTrace();
+    }
+    ...
+  }
+
 
 ## Usage (Example of react-native-tv-cast )
 ```javascript
