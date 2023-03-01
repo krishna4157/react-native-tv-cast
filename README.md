@@ -23,6 +23,8 @@ import com.connectsdk.discovery.DiscoveryManager;
 import com.connectsdk.discovery.DiscoveryProvider;
 import com.connectsdk.service.DeviceService;
 
+```java
+
   @Override
   public void onCreate() {
     super.onCreate();
@@ -35,6 +37,7 @@ import com.connectsdk.service.DeviceService;
     }
     ...
   }
+```
 
   After that Add EventListeners 'deviceList' for list of devices and 'duration' for duration
 
