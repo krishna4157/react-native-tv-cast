@@ -1,4 +1,4 @@
-# react-native-typing-animation-effect
+# react-native-tv-cast
 
 ![](gif)
 
