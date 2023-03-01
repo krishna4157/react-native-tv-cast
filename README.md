@@ -88,7 +88,7 @@ required Props and its datatypes :
 # Contribution :
 
 if you like my work 😀 u can contribute using
-vpa : krishna.santho08@okaxis
+vpa : krishna.santho08-1@okaxis
 
 it will be a great support to me ☺.
 
