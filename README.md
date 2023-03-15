@@ -1,4 +1,4 @@
-# react-native-typing-animation-effect
+# react-native-tv-cast
 
 ![](gif)
 
@@ -23,6 +23,8 @@ import com.connectsdk.discovery.DiscoveryManager;
 import com.connectsdk.discovery.DiscoveryProvider;
 import com.connectsdk.service.DeviceService;
 
+```java
+
   @Override
   public void onCreate() {
     super.onCreate();
@@ -35,6 +37,7 @@ import com.connectsdk.service.DeviceService;
     }
     ...
   }
+```
 
   After that Add EventListeners 'deviceList' for list of devices and 'duration' for duration
 
@@ -85,7 +88,7 @@ required Props and its datatypes :
 # Contribution :
 
 if you like my work 😀 u can contribute using
-vpa : krishna.santho08@okaxis
+vpa : krishna.santho08-1@okaxis
 
 it will be a great support to me ☺.
 
