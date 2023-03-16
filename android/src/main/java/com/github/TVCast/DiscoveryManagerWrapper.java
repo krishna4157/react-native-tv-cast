@@ -49,7 +49,12 @@ public class DiscoveryManagerWrapper extends ReactContextBaseJavaModule implemen
 
         discoveryManager.registerDefaultDeviceTypes();
         this.discoveryManager = discoveryManager;
-
+        try {
+            List<ConnectableDevice> writableList = new LinkedList<>();
+            discoveryManager.registerDeviceService((Class<DeviceService>) Class.forName("com.connectsdk.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.connectsdk.discovery.provider.CastDiscoveryProvider"));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         discoveryManager.addListener(this);
     }
 
@@ -69,7 +74,6 @@ public class DiscoveryManagerWrapper extends ReactContextBaseJavaModule implemen
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-//        discoveryManager.registerDeviceService(CastService, "com.connectsdk.discovery.provider.CastDiscoveryProvider");
         discoveryManager.start();
     }
 
@@ -109,6 +113,7 @@ public class DiscoveryManagerWrapper extends ReactContextBaseJavaModule implemen
 
     @Override
     public void onDeviceAdded(DiscoveryManager manager, ConnectableDevice device) {
+        
         mDeviceList.add(device);
         Map<String,ConnectableDevice> listOfDevices =discoveryManager.getAllDevices();
         List<ConnectableDevice> writableList = new LinkedList<>();
@@ -176,6 +181,7 @@ public class DiscoveryManagerWrapper extends ReactContextBaseJavaModule implemen
     @Override
     public void onDiscoveryFailed(DiscoveryManager manager, ServiceCommandError error) {
         if (callbackContext != null) {
+           
 //            module.error(callbackContext, error);
             WritableMap params = Arguments.createMap();
             params.putString("error", String.valueOf(error));
@@ -212,6 +218,7 @@ public class DiscoveryManagerWrapper extends ReactContextBaseJavaModule implemen
         if (args != null && args.length() > 0) {
             configure(args);
         }
+        
 
         setCallbackContext(Callback);
         start();

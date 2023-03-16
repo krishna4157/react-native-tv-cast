@@ -552,18 +552,15 @@ public class TVConnectModule extends ReactContextBaseJavaModule implements Lifec
         if (discoveryManagerWrapper == null) {
             DiscoveryManager.init(mCtx.getApplicationContext());
             discoveryManager = DiscoveryManager.getInstance();
+           
+            
+            discoveryManager.registerDefaultDeviceTypes();
             try {
-                discoveryManager.registerDeviceService((Class<DeviceService>) Class.forName("com.TVCast.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.TVCast.discovery.provider.CastDiscoveryProvider"));
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-            try {
-                DiscoveryManager.getInstance().registerDeviceService((Class<DeviceService>) Class.forName("com.connectsdk.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.connectsdk.discovery.provider.CastDiscoveryProvider"));
+                discoveryManager.registerDeviceService((Class<DeviceService>) Class.forName("com.connectsdk.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.connectsdk.discovery.provider.CastDiscoveryProvider"));
               } catch (ClassNotFoundException e) {
                 Log.d("CHROME","CHROME CAST NOT REGISTERED");
                 e.printStackTrace();
               }
-            discoveryManager.registerDefaultDeviceTypes();
             discoveryManagerWrapper = new DiscoveryManagerWrapper(this, discoveryManager);
             Log.d("CALLED 9998","CALLED 9988");
 
@@ -738,12 +735,12 @@ public class TVConnectModule extends ReactContextBaseJavaModule implements Lifec
 
     void pickDevice(JSONArray args, final Callback Callback) throws JSONException {
         Log.d("HELLO WORLD ","TRIGGERED pick device 2");
-        try {
-            discoveryManager.getInstance().registerDeviceService((Class<DeviceService>) Class.forName("com.TVCast.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.TVCast.discovery.provider.CastDiscoveryProvider"));
-        } catch (ClassNotFoundException e) {
-            Log.d("CHROME : ","CHROME CAST NOT ACTIVATED");
-            e.printStackTrace();
-        }
+        // try {
+        //     discoveryManager.registerDeviceService((Class<DeviceService>) Class.forName("com.TVCast.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.TVCast.discovery.provider.CastDiscoveryProvider"));
+        // } catch (ClassNotFoundException e) {
+        //     Log.d("CHROME : ","CHROME CAST NOT ACTIVATED");
+        //     e.printStackTrace();
+        // }
 
         JSONObject options = args.optJSONObject(0);
         String pairingTypeString = null;
