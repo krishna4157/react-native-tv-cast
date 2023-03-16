@@ -482,6 +482,12 @@ public class TVConnectModule extends ReactContextBaseJavaModule implements Lifec
                 return true;
             }else if ("resetDiscovery".equals(action)) {
                 stopDiscovery(successCallback);
+                try {
+                    DiscoveryManager.getInstance().registerDeviceService((Class<DeviceService>) Class.forName("com.connectsdk.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.connectsdk.discovery.provider.CastDiscoveryProvider"));
+                  } catch (ClassNotFoundException e) {
+                    Log.d("CHROME","CHROME CAST NOT REGISTERED");
+                    e.printStackTrace();
+                  }
                 discoveryManagerWrapper = null;
                 initDiscoveryManagerWrapper();
                 startDiscovery(arrArgs, successCallback);
@@ -557,7 +563,12 @@ public class TVConnectModule extends ReactContextBaseJavaModule implements Lifec
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
-
+            try {
+                DiscoveryManager.getInstance().registerDeviceService((Class<DeviceService>) Class.forName("com.connectsdk.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.connectsdk.discovery.provider.CastDiscoveryProvider"));
+              } catch (ClassNotFoundException e) {
+                Log.d("CHROME","CHROME CAST NOT REGISTERED");
+                e.printStackTrace();
+              }
             discoveryManager.registerDefaultDeviceTypes();
             discoveryManagerWrapper = new DiscoveryManagerWrapper(this, discoveryManager);
             Log.d("CALLED 9998","CALLED 9988");
