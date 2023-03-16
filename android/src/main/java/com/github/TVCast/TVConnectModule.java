@@ -481,13 +481,7 @@ public class TVConnectModule extends ReactContextBaseJavaModule implements Lifec
                 stopDiscovery(successCallback);
                 return true;
             }else if ("resetDiscovery".equals(action)) {
-                stopDiscovery(successCallback);
-                try {
-                    DiscoveryManager.getInstance().registerDeviceService((Class<DeviceService>) Class.forName("com.connectsdk.service.CastService"), (Class<DiscoveryProvider>)Class.forName("com.connectsdk.discovery.provider.CastDiscoveryProvider"));
-                  } catch (ClassNotFoundException e) {
-                    Log.d("CHROME","CHROME CAST NOT REGISTERED");
-                    e.printStackTrace();
-                  }
+                stopDiscovery(successCallback);                
                 discoveryManagerWrapper = null;
                 initDiscoveryManagerWrapper();
                 startDiscovery(arrArgs, successCallback);
