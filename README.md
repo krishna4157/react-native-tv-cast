@@ -19,11 +19,12 @@ To use this dependency in your project, the following packages are needed.
 ## Modify MainApplication.java
 
   
+
+
+```java
 import com.connectsdk.discovery.DiscoveryManager;
 import com.connectsdk.discovery.DiscoveryProvider;
 import com.connectsdk.service.DeviceService;
-
-```java
 
   @Override
   public void onCreate() {
