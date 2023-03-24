@@ -39,8 +39,13 @@ import com.connectsdk.service.DeviceService;
     ...
   }
 ```
-
-  After that Add EventListeners 'deviceList' for list of devices and 'duration' for duration
+## Note
+  Amazon FireTv Casting works only when targetSdk is set to 29 or below.
+  
+  To get the devices list. you need to add listeners
+  
+  'deviceList' for list of devices 
+  'duration' for duration
 
 
 ## Usage (Example of react-native-tv-cast )
