@@ -45,6 +45,7 @@ import com.connectsdk.service.DeviceService;
   To get the devices list. you need to add listeners
   
   'deviceList' for list of devices 
+  
   'duration' for duration
 
 
