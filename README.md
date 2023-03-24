@@ -100,6 +100,8 @@ setDevice(deviceId: DeviceId, StreamData: streamData, callback: CallbackType)
 // };
 
 ```
+# issues
+Alternative you can raise issues here https://github.com/krishna4157/react-native-tv-cast/issues
 
 # Credit goes to : 
 
