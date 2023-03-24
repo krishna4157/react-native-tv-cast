@@ -39,7 +39,7 @@ import com.connectsdk.service.DeviceService;
     ...
   }
 ```
-## Note
+## Important Note
   Amazon FireTv Casting works only when targetSdk is set to 29 or below.
   
   To get the devices list. you need to add listeners
