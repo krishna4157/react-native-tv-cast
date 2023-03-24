@@ -83,8 +83,15 @@ resetDiscovery()
 stopCast()
 // stops the current casting process
 
-setDevice(deviceId: DeviceId, StreamData: StreamData, callback: CallbackType)
+setDevice(deviceId: DeviceId, StreamData: streamData, callback: CallbackType)
 // Sets the deviceId where we need to cast.
+// where streamData will be 
+// var streamData = {
+//  url: string;
+//  title: string;
+//  description: string;
+//  icon: string;
+// };
 
 ```
 
