@@ -75,15 +75,18 @@ TVCast;
 
 # Methods :
 
+```javascript
+
 resetDiscovery()
-resets the discovery
+// resets the discovery
 
 stopCast()
-stops the current casting process
+// stops the current casting process
 
 setDevice(deviceId: DeviceId, StreamData: StreamData, callback: CallbackType)
-Sets the deviceId where we need to cast.
+// Sets the deviceId where we need to cast.
 
+```
 
 # Credit goes to : 
 
