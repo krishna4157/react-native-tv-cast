@@ -73,11 +73,16 @@ export default class App extends Component{
 TVCast;
 ```
 
-# required Props and its datatypes :
+# Methods :
 
-required Props and its datatypes :
+resetDiscovery()
+resets the discovery
 
+stopCast()
+stops the current casting process
 
+setDevice(deviceId: DeviceId, StreamData: StreamData, callback: CallbackType)
+Sets the deviceId where we need to cast.
 
 
 # Credit goes to : 
