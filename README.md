@@ -81,6 +81,10 @@ const castDevice = () => {
 
 }
 
+const stopCasting = () => {
+  TVCast.stopCast();
+}
+
    
   return (
     <View>          
@@ -88,6 +92,11 @@ const castDevice = () => {
         castDevice();
       }} >
         <Text>CAST </Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() =>{
+        stopCasting();
+      }} >
+        <Text>STOP CASTING </Text>
       </TouchableOpacity>
     </View>
   );
