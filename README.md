@@ -60,23 +60,37 @@ import com.connectsdk.service.DeviceService;
 
 
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import TVCast from 'react-native-tv-cast';
 /*
     npm install react-native-tv-cast
 */
 
-export default class App extends Component{
-    constructor(props){
-        super();
-    }
-    render(){
-        return (
-       <View>
-            
-        </View>
-        );
-    }
+const App = () => {
+
+React.useEffect(()=> {
+  DeviceEventEmitter.addListener('deviceList', (e) => {
+    //get device that is discovered in your wifi network.
+    // add the devices in usestate array
+  });
+},[])
+
+const castDevice = () => {
+  // this method triggers casting process and connects to your tv by using identifier.
+  // TVCast.setDevice(deviceId: DeviceId, StreamData: streamData, callback: CallbackType)
+
+}
+
+   
+  return (
+    <View>          
+      <TouchableOpacity onPress={() =>{
+        castDevice();
+      }} >
+      </TouchableOpacity>
+    </View>
+  );
+   
 }
 
 
