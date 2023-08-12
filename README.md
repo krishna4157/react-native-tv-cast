@@ -60,7 +60,7 @@ import com.connectsdk.service.DeviceService;
 
 
 import React, {Component} from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, DeviceEventEmitter } from 'react-native';
 import TVCast from 'react-native-tv-cast';
 /*
     npm install react-native-tv-cast
