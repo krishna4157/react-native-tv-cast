@@ -94,9 +94,6 @@ const castDevice = () => {
    
 }
 
-
-// TODO: What to do with the module?
-TVCast;
 ```
 
 # Methods :
