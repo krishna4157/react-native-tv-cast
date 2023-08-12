@@ -16,6 +16,11 @@ To use this dependency in your project, the following packages are needed.
 
 ### Mostly automatic installation
 
+## Modify app/build.gradle
+```java
+  implementation ( 'com.github.ConnectSDK:Connect-SDK-Android:2.0.0')
+```
+
 ## Modify MainApplication.java
 
   
