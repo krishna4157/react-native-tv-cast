@@ -87,6 +87,7 @@ const castDevice = () => {
       <TouchableOpacity onPress={() =>{
         castDevice();
       }} >
+        <Text>CAST </Text>
       </TouchableOpacity>
     </View>
   );
